@@ -53,7 +53,8 @@ ngx.say("Is blocked: ", blockedIPs:isInSubnets(ngx.var.remote_addr))
 ```
 
 ### response
-```ip 192.168.3.1
+```
+ip 192.168.3.1
 is allowed : false
 is blocked : false
 ```
