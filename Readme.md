@@ -81,12 +81,18 @@ allowedIPs:addSubnet("192.168.4.0/24")
 allowedIPs:addSubnet("192.1.4.0/24")
 allowedIPs:addSubnet("192.1.1.0/24")
 
---the tree will have the values. 
---*8bits delimiter is a separator for visual efects
+--the tree will have the values from the image. 
+-- where *8bits delimiter is a separator for visual efects
 ngx.say("Allowed IPs Tree IPv4")
 allowedIPs.treeIPv4.printTree(allowedIPs.treeIPv4.root)
 
 ```
+```
+192.168.1.0/24 => 11000000 10101000 00000001 
+192.168.4.0/24 => 11000000 10101000 00000100 
+192.1.1.0/24   => 11000000 00000001 00000001
+192.1.1.0/24   => 11000000 00000001 00000001
 
+```
 ![alt text](image.png)
 
