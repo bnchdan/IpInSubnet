@@ -16,11 +16,15 @@ Below is a complete example in Nginx
 
 ### nginx.conf
 ```nginx
+...
 init_by_lua_file "/{YOUR_PATH}/init.lua";
+...
 server {
     ...
     access_by_lua_file "/{YOUR_PATH}/access.lua";
+    ...
 }
+...
 ```
 
 ### init.lua
@@ -29,6 +33,8 @@ server {
 local info = debug.getinfo(1, "S")  
 local path = info.source:sub(2):match("(.*/)")  
 package.path = path.."../lib/?.lua;" .. package.path
+-- or append to package.path where the lib is saved
+-- package.path = package.path .. ";/usr/local/share/lua/IPInSubnet/lib/?.lua"
 
 -- Require the module
 IPInSubnet = require("IPInSubnet")
@@ -58,11 +64,4 @@ ip 192.168.3.1
 is allowed : false
 is blocked : false
 ```
-
----
-
-- Fast and scalable – Optimized for handling large subnet lists.
-- Easy integration – Works with **Nginx, OpenResty, and pure Lua applications**.
-
-
 
