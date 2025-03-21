@@ -71,19 +71,18 @@ ngx.say("Is blocked: ", blockedIPs:isInSubnets(ngx.var.remote_addr))
 ```
 
 ### response
-```
-IP: 192.168.3.10
-Is allowed: false
-Is blocked: false
-```
+![alt text](image-1.png)
 
-####  Ipv4 tree for allowedIP
+#### Show IPv4 tree for allowedIP
 ```lua
+--if you add the subnets
 allowedIPs:addSubnet("192.168.1.0/24")
 allowedIPs:addSubnet("192.168.4.0/24")
 allowedIPs:addSubnet("192.1.4.0/24")
 allowedIPs:addSubnet("192.1.1.0/24")
 
+--the tree will have the values. 
+--*8bits delimiter is a separator for visual efects
 ngx.say("Allowed IPs Tree IPv4")
 allowedIPs.treeIPv4.printTree(allowedIPs.treeIPv4.root)
 
