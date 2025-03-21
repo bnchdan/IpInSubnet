@@ -683,7 +683,7 @@ BinaryTree = {}
 
         ngx.say(space..node.value)
         if index  % 8 == 0 and index ~= 0 then
-            ngx.say(space.."............8bits length............")
+            ngx.say(space.."............8bits delimiter............")
         end
         
         BinaryTree.printTree(node.left, delimiter, space .. delimiter, index +1)
