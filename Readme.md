@@ -52,6 +52,11 @@ allowedIPs = IPInSubnet:new()
 
 -- Define allowed and blocked subnets
 allowedIPs:addSubnet("192.168.1.0/24")
+allowedIPs:addSubnet("192.168.4.0/24")
+allowedIPs:addSubnet("192.1.4.0/24")
+allowedIPs:addSubnet("192.1.1.0/24")
+
+
 blockedIPs:addSubnet("192.168.2.0/24")
 blockedIPs:addSubnet("11:0db8::/32")
 ```
