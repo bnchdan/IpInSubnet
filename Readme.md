@@ -1,7 +1,8 @@
-# IPInSubnet - Fast Binary Tree-Based IP Subnet Matching
+# IPInSubnet - Fast Binary Tree IP Subnet Matching
 
 ## Overview
 **IPInSubnet** is a Lua library for efficient IPv4 and IPv6 subnet searches using a binary tree. It is designed for scenarios involving a large number of subnets, enabling quick lookups to determine whether an IP address belongs to a specific subnet.
+
 
 ### Features
 - Supports both **IPv4** and **IPv6** addresses.
@@ -60,7 +61,7 @@ ngx.say("Is blocked: ", blockedIPs:isInSubnets(ngx.var.remote_addr))
 
 ### response
 ```
-ip 192.168.3.1
+ip 192.168.3.10
 is allowed : false
 is blocked : false
 ```

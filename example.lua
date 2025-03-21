@@ -1,4 +1,8 @@
+--add the patk to the package.path
 package.path = "../lib/?.lua;"..package.path
+-- or append the full path to the package.path where the lib is saved
+-- package.path = package.path .. ";/usr/local/share/lua/IPInSubnet/lib/?.lua"
+
 IPInSubnet = require("IPInSubnet")
 mIPInSubnet = IPInSubnet:new()
 
