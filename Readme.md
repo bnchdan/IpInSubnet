@@ -10,6 +10,12 @@
 - Handles **CIDR notation** for subnet masks.
 - Ideal for **firewalls, access control, and Nginx/OpenResty** use cases.
 
+### Requirements
+    lua-bitop - for bitwise operations, for Nginx, Openrestry is preinstalled
+        apt install lua-bitop
+
+    luaunit - for unit testing
+        apt install lua-unit
 
 ---
 ## Usage Example
